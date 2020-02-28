@@ -28,7 +28,7 @@ module.exports = createReactClass
         return <ErrorPage message="404 not found" /> if @loadError
         return @renderLoading() unless @loaded
 
-        return @renderReadme() if @props.mobile and @readme?
+#        return @renderReadme() if @props.mobile and @readme?
 
         if @props.mobile # and we don't have a readme
             return <ErrorPage
@@ -36,7 +36,7 @@ module.exports = createReactClass
                 detail="Try opening this link in Chrome on a laptop or desktop!"
                 />
 
-        return @renderReadmeOnTheSide() if @readme?
+#        return @renderReadmeOnTheSide() if @readme?
         return @renderPDandBlitz()
 
     renderPDandBlitz: ->
@@ -237,7 +237,7 @@ module.exports = createReactClass
 
             else
                 [readme, undefined]
-###
+
         <div className="fiddle-readme-bar">
             <header>
                 <img className="pagedog-logo" src={"#{config.static_server}/assets/favicon.png"} />
@@ -260,6 +260,7 @@ module.exports = createReactClass
                 </div>
                 {next_button if next_button?}
             </div>
+        </div>
 
 ##
 
@@ -272,4 +273,3 @@ CodeBlock = createReactClass
     render: -> <pre><code ref="code" className={this.props.language}>{@props.value}</code></pre>
     componentDidMount: -> hljs.highlightBlock(@refs.code)
     shouldComponentUpdate: -> false
-###
