@@ -22,7 +22,7 @@ readdirRecursive = window.require 'fs-readdir-recursive'
 fs = require('fs')
 path = require('path')
 filendir = require('filendir')
-readdirRecursive = () -> {[]}
+readdirRecursive = () -> []
 
 
 
