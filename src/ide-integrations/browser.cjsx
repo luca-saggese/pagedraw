@@ -64,7 +64,7 @@ module.exports = createReactClass
     handleDocjsonChanged: (docjson) ->
         # save the .pagedraw file
         #fs.writeFileSync(open_file, JSON.stringify(docjson), 'utf-8')
-###
+
         # write the compiled files
         root_dir = path.dirname(open_file)
         managed_dir = path.join(root_dir, 'src/pagedraw/')
@@ -84,7 +84,7 @@ module.exports = createReactClass
             existing_file_path = path.join(managed_dir, existing_file_path_inside_managed_dir)
             is_overwritable =
                 try
-                    first_5_lines = fs.readFileSync(existing_file_path, 'utf-8').split('\n').slice(0, 5).join('\n')
+#                    first_5_lines = fs.readFileSync(existing_file_path, 'utf-8').split('\n').slice(0, 5).join('\n')
 
                     # see if any of them match pattern
                     _l.includes(first_5_lines, generated_by_header)
@@ -94,18 +94,18 @@ module.exports = createReactClass
                     undefined
 
             [existing_file_path, is_overwritable]
-
+###
         for filePath, [new_contents, is_overwritable] of util.zip_dicts [_l.fromPairs(build_results), existing_built_files]
             if is_overwritable == true and not new_contents?
                 fs.unlinkSync(filePath)
 
             else if (is_overwritable == true or is_overwritable == undefined) and new_contents?
                 filendir.writeFile filePath, new_contents, (() -> )
-
+###
             # else if new_contents? and is_overwritable == false then no-op; someone else owns the file
             # else if not new_contents? and is_overwritable == false then no-op; not relevant to us
             # else if not new_contents? and is_overwritable == undefined then no-op; not relevant to us
-###
+
 
 # definitely not "right", kind of a hack
 isInsideDir = (dir_path, file_path) -> file_path.startsWith(dir_path)
