@@ -260,7 +260,7 @@ module.exports = createReactClass
                 </div>
                 {next_button if next_button?}
             </div>
-###
+
 ##
 
 hljs = require 'highlight.js'
@@ -272,3 +272,4 @@ CodeBlock = createReactClass
     render: -> <pre><code ref="code" className={this.props.language}>{@props.value}</code></pre>
     componentDidMount: -> hljs.highlightBlock(@refs.code)
     shouldComponentUpdate: -> false
+###
