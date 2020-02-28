@@ -21,15 +21,14 @@ readdirRecursive = window.require 'fs-readdir-recursive'
 ###
 fs = require('fs')
 path = require('path')
-
-electron = {}
-filendir = {}
-readdirRecursive = {}
+filendir = require('filendir')
+readdirRecursive = require 'fs-readdir-recursive'
 
 
-currentWindow = electron.getCurrentWindow(['openFile'])
 
-openResults = electron.dialog.showOpenDialog()
+#currentWindow = electron.getCurrentWindow(['openFile'])
+
+#openResults = electron.dialog.showOpenDialog()
 ###
 if openResults?
     open_file = openResults[0]
@@ -45,14 +44,14 @@ initialDocjson = (new Doc()).serialize()
 console.log(initialDocjson)
 #fs.writeFileSync(open_file, initialDocjson, 'utf-8')
 
-currentWindow.setRepresentedFilename?(open_file)
+#currentWindow.setRepresentedFilename?(open_file)
 
 module.exports = createReactClass
     componentWillMount: ->
 
-    componentDidMount: ->
-        currentWindow.maximize()
-        currentWindow.show()
+    #componentDidMount: ->
+    #    currentWindow.maximize()
+    #    currentWindow.show()
 
     render: ->
         <Editor
