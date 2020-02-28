@@ -237,7 +237,7 @@ module.exports = createReactClass
 
             else
                 [readme, undefined]
-
+###
         <div className="fiddle-readme-bar">
             <header>
                 <img className="pagedog-logo" src={"#{config.static_server}/assets/favicon.png"} />
@@ -260,8 +260,7 @@ module.exports = createReactClass
                 </div>
                 {next_button if next_button?}
             </div>
-        </div>
-
+###
 ##
 
 hljs = require 'highlight.js'
