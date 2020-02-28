@@ -1,11 +1,11 @@
 <html>
 <head>
     <!-- FIXME: these stylesheets need to come from a shared source of truth -->
-    <link rel="stylesheet" href="http://5.135.157.50:3000/bootstrap-namespaced.css">
-    <link rel="stylesheet" href="http://5.135.157.50:3000/semantic-namespaced.css">
-    <link rel="stylesheet" href="http://5.135.157.50:3000/vendor/quill-0.20.0/quill.base.css">
-    <link rel="stylesheet" href="http://5.135.157.50:3000/vendor/hopscotch/hopscotch.min.css">
-    <link rel="stylesheet" href="http://5.135.157.50:3000/editor.css">
+    <link rel="stylesheet" href="/bootstrap-namespaced.css">
+    <link rel="stylesheet" href="/semantic-namespaced.css">
+    <link rel="stylesheet" href="/vendor/quill-0.20.0/quill.base.css">
+    <link rel="stylesheet" href="/vendor/hopscotch/hopscotch.min.css">
+    <link rel="stylesheet" href="/editor.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -18,17 +18,17 @@
     window.pd_config={
       "environment":"development",
       "metaserver":"http://localhost:4000",
-      "static_server":"http://5.135.157.50:3000",
+      "static_server":"",
       "docserver_host":"https://pagedraw-1226.firebaseio.com",
       "compileserver_host":"http://localhost:5000",
       "sketch_importer_server_host":"http://localhost:2083",
       "external_code_server_host":"http://localhost:3333",
       "editor_css_urls":[ // FIXME dups from above
-        "http://5.135.157.50:3000/bootstrap-namespaced.css",
-        "http://5.135.157.50:3000/semantic-namespaced.css",
-        "http://5.135.157.50:3000/vendor/quill-0.20.0/quill.base.css",
-        "http://5.135.157.50:3000/vendor/hopscotch/hopscotch.min.css",
-        "http://5.135.157.50:3000/editor.css",
+        "/bootstrap-namespaced.css",
+        "/semantic-namespaced.css",
+        "/vendor/quill-0.20.0/quill.base.css",
+        "/vendor/hopscotch/hopscotch.min.css",
+        "/editor.css",
         "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700",
         "https://fonts.googleapis.com/css?family=Roboto:300,400",
         "https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -37,6 +37,6 @@
     </script>
 
     <div id="app"></div>
-    <script src="http://5.135.157.50:3000/script.js" crossorigin="anonymous"></script>
+    <script src="/script.js" crossorigin="anonymous"></script>
 </body>
 </html>
