@@ -1,42 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html>
+<head>
+    <!-- FIXME: these stylesheets need to come from a shared source of truth -->
+    <link rel="stylesheet" href="http://localhost:3000/bootstrap-namespaced.css">
+    <link rel="stylesheet" href="http://localhost:3000/semantic-namespaced.css">
+    <link rel="stylesheet" href="http://localhost:3000/vendor/quill-0.20.0/quill.base.css">
+    <link rel="stylesheet" href="http://localhost:3000/vendor/hopscotch/hopscotch.min.css">
+    <link rel="stylesheet" href="http://localhost:3000/editor.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <script type="text/javascript">
+    window.pd_params={
+      "route":"browser"
+    };
+    window.pd_config={
+      "environment":"development",
+      "metaserver":"http://localhost:4000",
+      "static_server":"http://localhost:3000",
+      "docserver_host":"https://pagedraw-1226.firebaseio.com",
+      "compileserver_host":"http://localhost:5000",
+      "sketch_importer_server_host":"http://localhost:2083",
+      "external_code_server_host":"http://localhost:3333",
+      "editor_css_urls":[ // FIXME dups from above
+        "http://localhost:3000/bootstrap-namespaced.css",
+        "http://localhost:3000/semantic-namespaced.css",
+        "http://localhost:3000/vendor/quill-0.20.0/quill.base.css",
+        "http://localhost:3000/vendor/hopscotch/hopscotch.min.css",
+        "http://localhost:3000/editor.css",
+        "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700",
+        "https://fonts.googleapis.com/css?family=Roboto:300,400",
+        "https://fonts.googleapis.com/icon?family=Material+Icons"
+      ]
+    };
+    </script>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    This is a placeholder needed for our build system in dev mode.  You should never see it.
-
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <div id="app"></div>
+    <script src="http://localhost:3000/script.js" crossorigin="anonymous"></script>
+</body>
 </html>

@@ -56,6 +56,7 @@ else
         new_project: -> require('../meta-app/new-project')
         atom_integration: -> require('../ide-integrations/pd-atom')
         electron_app: -> require('../ide-integrations/electron-app')
+        browser: -> require('../ide-integrations/browser')
     }
 
     AppWrapper = createReactClass
