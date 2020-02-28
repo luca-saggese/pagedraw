@@ -33,7 +33,8 @@ else
     })
     ###
 initialDocjson = (new Doc()).serialize()
-fs.writeFileSync(open_file, initialDocjson, 'utf-8')
+console.log(initialDocjson)
+#fs.writeFileSync(open_file, initialDocjson, 'utf-8')
 
 currentWindow.setRepresentedFilename?(open_file)
 
