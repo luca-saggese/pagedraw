@@ -43,7 +43,7 @@ else
 initialDocjson = (new Doc()).serialize()
 console.log(initialDocjson)
 open_file = '../../local-repository/tes.json'
-fs.writeFileSync(open_file, initialDocjson, 'utf-8')
+#fs.writeFileSync(open_file, initialDocjson, 'utf-8')
 
 #currentWindow.setRepresentedFilename?(open_file)
 
@@ -63,8 +63,8 @@ module.exports = createReactClass
 
     handleDocjsonChanged: (docjson) ->
         # save the .pagedraw file
-        fs.writeFileSync(open_file, JSON.stringify(docjson), 'utf-8')
-
+        #fs.writeFileSync(open_file, JSON.stringify(docjson), 'utf-8')
+###
         # write the compiled files
         root_dir = path.dirname(open_file)
         managed_dir = path.join(root_dir, 'src/pagedraw/')
@@ -105,7 +105,7 @@ module.exports = createReactClass
             # else if new_contents? and is_overwritable == false then no-op; someone else owns the file
             # else if not new_contents? and is_overwritable == false then no-op; not relevant to us
             # else if not new_contents? and is_overwritable == undefined then no-op; not relevant to us
-
+###
 
 # definitely not "right", kind of a hack
 isInsideDir = (dir_path, file_path) -> file_path.startsWith(dir_path)
