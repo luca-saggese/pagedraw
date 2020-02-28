@@ -42,7 +42,8 @@ else
     ###
 initialDocjson = (new Doc()).serialize()
 console.log(initialDocjson)
-#fs.writeFileSync(open_file, initialDocjson, 'utf-8')
+open_file = '../../local-repository/tes.json'
+fs.writeFileSync(open_file, initialDocjson, 'utf-8')
 
 #currentWindow.setRepresentedFilename?(open_file)
 
