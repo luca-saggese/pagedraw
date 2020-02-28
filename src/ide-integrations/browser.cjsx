@@ -12,11 +12,20 @@ util = require '../util'
 # We want to be careful to not use 'require' or webpack might try to bundle the node modules for
 # us, or something.  This file will be built into the static js package that's on the cloud editor
 # that runs in the web, so let's try not to break it.
+###
 fs = window.require('fs')
 path = window.require('path')
 electron = window.require('electron').remote
 filendir = window.require('filendir')
 readdirRecursive = window.require 'fs-readdir-recursive'
+###
+fs = require('fs')
+path = require('path')
+
+electron = {}
+filendir = {}
+readdirRecursive = {}
+
 
 currentWindow = electron.getCurrentWindow(['openFile'])
 
